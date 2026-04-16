@@ -30,17 +30,17 @@ const ProjectData ={
         },
         {
             number:'04',
-            title:"Front-End Project4",
-            discription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum praesentium,",
-            lang:"Html, css, Js",
-            photo:<Image src='/images/photo_2025-09-17_15-36-20.jpg' alt="add Photo" width={500}  height={200}></Image>
+            title:"Front-End, Products management system",
+            discription:"A comprehensive management system built using React and Firebase, based on a manager-employee structure. The manager has full system management privileges, while employees operate within defined scopes. The manager adds employees, organizes and modifies departments, and creates tasks that serve as a direct communication channel with staff. Employees, in turn, can add, manage, and sell products, with all transactions linked to their user accounts. The system includes an intelligent inventory system that tracks transactions by month and year, along with an advanced search engine for quick access to products and data.,",
+            lang:"React js, Tailwind css, Firebase",
+            photo:<Image src='/images/photo_2026-04-16_12-31-07.jpg' alt="add Photo" width={500}  height={200}></Image>
         },
         {
             number:'05',
             title:"Front-End Project5",
-            discription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum praesentium,",
-            lang:"Html, css, Js",
-            photo:<Image src='/images/photo_2025-09-17_15-36-20.jpg' alt="add Photo" width={500} height={200}></Image>
+            discription:"A simple online store with a shopping cart was created solely to train the data fetching API.",
+            lang:'React js, CSS',
+            photo:<Image src='/images/photo_2026-04-16_14-32-38.jpg' alt="add Photo" width={500} height={200}></Image>
         },
     ]
 }
@@ -48,9 +48,9 @@ const ProjectData ={
 const ProjectCreater =(ele)=>{
     return (
         <div className=' w-[40%] min-h-[300px] text-white max-[820px]:w-[90%] '>
-            <div className='text-7xl'>{ProjectData.project[ele].number}</div>
+            <div className='text-7xl text-green-500/60'>{ProjectData.project[ele].number}</div>
             <div className='text-2xl py-2'>{ProjectData.project[ele].title}</div>
-            <div className='text-sm py-2'>{ProjectData.project[ele].discription}</div>
+            <div className='text-sm py-2 h-[75px]  overflow-auto'>{ProjectData.project[ele].discription}</div>
             <div className='text-green-700 py-2'>{ProjectData.project[ele].lang}</div>
             <hr className='py-2'/>
             <div className='inline-block py-2 bg-green-500 p-3 mx-3 rounded-full hover:bg-gray-700 cursor-pointer '><FaArrowRight /></div>

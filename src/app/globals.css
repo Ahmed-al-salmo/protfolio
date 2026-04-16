@@ -24,3 +24,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+::-webkit-scrollbar{
+  /* background: red; */
+  all:unset;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: oklch(72.3% 0.219 149.579);
+  border-radius: 50px;
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background-color: #063d3a;
+  border-radius: 60px;
+}
+/* #activeItem{
+  background-color:oklch(72.3% 0.219 149.579) ;
+} */
