@@ -42,6 +42,20 @@ const ProjectData ={
             lang:'React js, CSS',
             photo:<Image src='/images/photo_2026-04-16_14-32-38.jpg' alt="add Photo" width={500} height={200}></Image>
         },
+        {
+            number:'06',
+            title:"Front-End Project6",
+            discription:"Dental Clinic help patient to review old treatment before book an appointment, also has a smart dashboard enable the doctor to do many things easly ",
+            lang:'React js, Tailwind css, Firebase',
+            photo:<Image src='/images/photo_2026-04-29_06-18-29.jpg' alt="add Photo" width={500} height={200}></Image>
+        },
+        {
+            number:'07',
+            title:"Front-End Project7",
+            discription:"A simple website aimed at helping with self-development through daily challenges. ",
+            lang:'React js, Tailwind css, Firebase',
+            photo:<Image src='/images/photo_2026-05-23_03-11-08.jpg' alt="add Photo" width={500} height={200}></Image>
+        },
     ]
 }
 {/* <FaAlignRight /> */}

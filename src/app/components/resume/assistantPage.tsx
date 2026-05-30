@@ -2,8 +2,6 @@
 import {useState } from 'react'
 import NavBar from '../../navbar/page'
 import "./ahh.css"
-import { FaHtml5,FaCss3,FaJs,FaReact,FaFigma, } from 'react-icons/fa'
-import { SiTailwindcss,SiNextdotjs,SiTypescript,SiRedux,SiJson } from 'react-icons/si'
 
 const education={
     title:"My Education",
@@ -52,59 +50,38 @@ const skills={
     discription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo distinctio consectetur dolorem ",
     info:[
         {
-            icons:<FaHtml5/>,
-            description:"HTML5"
+            type:"language",
+            typeName:'HTML 5, CSS 3, JavaScript, TypeScript',
         },
         {
-            icons:<FaCss3/>,
-            description:"CSS"
+            type:"framework",
+            typeName:'React js, Next js, Tailwind css',
         },
         {
-            icons:<FaJs/>,
-            description:"JS"
+            type:"library",
+            typeName:'Firebase, Json, Figma, GitHub ',
         },
         {
-            icons:<FaReact/>,
-            description:"React"
+            type:"state managment",
+            typeName:'Redux, Context API',
         },
-        {
-            icons:<FaFigma/>,
-            description:"Figma"
-        },
-        {
-            icons:<SiTailwindcss/>,
-            description:"Tailwind"
-        },
-        {
-            icons:<SiNextdotjs/>,
-            description:"Next js"
-        },
-        {
-            icons:<SiTypescript/>,
-            description:"TypeScript"
-        },
-        {
-            icons:<SiRedux/>,
-            description:"Redux"
-        },
-        {
-            icons:<SiJson/>,
-            description:"JSON"
-        },
+        
     ]
 }
 
 const about={
     title:"About Me",
     discription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo distinctio consectetur dolorem ",
+    
     info:{
-        name:"Name: Ahmed Alsalmo",
-        nationality:"Nationality: Syrian",
-        experiencs:"Experience: junior",
-        freelancer:"Freelancer: Available",
-        phone:"Phone: +963 953 736 386",
-        email:"Email:salmoahmad079@gmail",
-        lang:"Language: Arabic, English"
+        
+        name:" Ahmed Alsalmo",
+        nationality:"Syrian",
+        experiencs:"junior",
+        freelancer:"Available",
+        phone:"+963 953 736 386",
+        email:"salmoahmad079@gmail",
+        lang:" Arabic, English"
     },
     
 }
@@ -137,14 +114,17 @@ const Skills=()=>{
         <div>
             <div className='pl-3 text-4xl text-white font-mono'>{skills.title} </div>
             <div className='text-sm pl-3  pt-4 text-white'>{skills.discription} </div>
-            <div className='listView flex gap-3 pt-[30px] flex-wrap w-[100%] h-[350px] overflow-auto '>
+            <div className='listView  gap-3 p-3 flex-wrap w-[100%] h-[350px] overflow -auto '>
                 
                 {
                     skills.info.map((ele,index)=>{
                         return(
-                            <div key={index} className='flex gap-y-1 flex-col items-center text-white p-3 w-[48%] h-[150px] bg-[#073835] rounded-xl max-[360px]:w-[90%] '>
-                                <div className=' text-green-500 text-8xl w-fit  '>{ele.icons}</div>
-                                <div className=' text-center text-green-500'>{ele.description}</div>
+                            <div key={index} className=' flex-col items-center text-white p-3 w-[96%] m-2 bg-[#073835] rounded-xl max-[360px]:w-[90%] '>
+                                <div className=' text-white  w-fit  '>
+                                    <span className='text-green-300'>{ele.type}: </span>
+                                    {ele.typeName}
+                                </div>
+                                
                             </div>
                         )
                     })
@@ -159,16 +139,16 @@ const AboutMe=()=>{
         <div>
             <div className='pl-3 text-4xl text-white font-mono'>{about.title} </div>
             <div className='text-sm pl-3  pt-4 text-gray-500'>{about.discription} </div>
-            <div className='listView flex justify-between text-white font-mono gap-y-2 pt-[30px] flex-wrap w-[100%]  overflow-auto '>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]' >{about.info.name}</div>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]'>{about.info.experiencs}</div>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]'>{about.info.email}</div>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]'>{about.info.freelancer}</div>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]'>{about.info.nationality}</div>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]'>{about.info.phone}</div>
-                <div className=' w-[48%] h-fit py-1 max-[530px]:w-[90%]'>{about.info.lang}</div>
-                
-                
+            <div className='listView text-white font-mono pt-[30px] h-[300px]  w-[100%]  overflow-auto '>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]' ><span className='text-green-500'> Name: </span> {about.info.name}</div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Experiencs: </span>{about.info.experiencs}</div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Email: </span>{about.info.email}</div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Freelancer: </span>{about.info.freelancer}</div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Github: </span> </div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Linkedin: </span> </div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Nationality: </span>{about.info.nationality}</div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Phone: </span>{about.info.phone}</div>
+                <div className='bg-[#073835] py-3 px-4 rounded-lg m-1 max-[530px]:w-[90%]'><span className='text-green-500'> Language: </span>{about.info.lang}</div>
             </div>
         </div>
     )
